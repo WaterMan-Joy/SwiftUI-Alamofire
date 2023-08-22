@@ -12,17 +12,23 @@ struct ContentView: View {
     @ObservedObject var viewModel = AlamofireViewModel()
     
     var body: some View {
-        VStack {
-            Button(action: {
-                viewModel.fetchPhotos()
-            }, label: {
-                Text("go")
-            })
-            ForEach(viewModel.photos) { photo in
-                Text(photo.title)
+        ScrollView {
+            VStack {
+                Button(action: {
+                    viewModel.fetchPhotos()
+                }, label: {
+                    Text("go")
+                })
+                ForEach(viewModel.photos) { photo in
+                    Text(photo.description)
+                    Divider()
+                }
             }
+            .padding()
         }
-        .padding()
+        .refreshable {
+            viewModel.fetchPhotos()
+        }
     }
 }
 

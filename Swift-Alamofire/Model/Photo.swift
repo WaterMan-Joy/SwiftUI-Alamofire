@@ -8,9 +8,13 @@
 import Foundation
 
 
-struct Photo: Codable, Identifiable {
+struct Photo: Codable, Identifiable, CustomStringConvertible {
     let userID, id: Int
     let title, body: String
+    
+    var description: String {
+        return "[\(title), \(body)]"
+    }
 
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
