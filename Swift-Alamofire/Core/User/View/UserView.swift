@@ -14,8 +14,12 @@ struct UserView: View {
     var body: some View {
         ScrollView {
             ForEach(viewModel.users) { user in
-                Text(user.email)
+                UserCell(user: user)
+                Divider()
             }
+        }
+        .refreshable {
+            viewModel.fetchUsers()
         }
     }
 }

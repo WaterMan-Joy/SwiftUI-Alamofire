@@ -11,16 +11,18 @@ struct ContentView: View {
         
     var body: some View {
         TabView {
-            PostView()
-                .tabItem {
-                    Image(systemName: "house.circle")
-                                            Text("Posts")
-                }
-            UserView()
-                .tabItem {
-                    Image(systemName: "house.circle")
-                                            Text("Users")
-                }
+            Group {
+                PostView()
+                    .tabItem {
+                        Image(systemName: "house.circle")
+                                                Text("Posts")
+                    }
+                UserView()
+                    .tabItem {
+                        Image(systemName: "house.circle")
+                                                Text("Users")
+                    }
+            }
         }
     }
 }

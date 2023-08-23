@@ -26,7 +26,6 @@ class UserViewModel: ObservableObject {
         AF.request(url)
             .publishDecodable(type: [User].self)
             .compactMap({ $0.value})
-            
             .sink { completion in
                 print("DEBUG: COMPLETION")
             } receiveValue: { receiveValue in

@@ -18,6 +18,7 @@
 		A837A8382A958BA60082AB33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A8372A958BA60082AB33 /* User.swift */; };
 		A837A83E2A958BE00082AB33 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A83D2A958BE00082AB33 /* UserView.swift */; };
 		A837A8402A958C0A0082AB33 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A83F2A958C0A0082AB33 /* UserViewModel.swift */; };
+		A837A8452A95941F0082AB33 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A8442A95941F0082AB33 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A837A8372A958BA60082AB33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A837A83D2A958BE00082AB33 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A837A83F2A958C0A0082AB33 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A837A8442A95941F0082AB33 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		A837A83A2A958BCD0082AB33 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				A837A8432A9594150082AB33 /* Items */,
 				A837A83C2A958BD60082AB33 /* ViewModel */,
 				A837A83B2A958BD20082AB33 /* View */,
 			);
@@ -151,6 +154,14 @@
 				A837A83F2A958C0A0082AB33 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A837A8432A9594150082AB33 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				A837A8442A95941F0082AB33 /* UserCell.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				A837A81E2A9437F60082AB33 /* ContentView.swift in Sources */,
 				A837A8382A958BA60082AB33 /* User.swift in Sources */,
 				A837A81C2A9437F60082AB33 /* Swift_AlamofireApp.swift in Sources */,
+				A837A8452A95941F0082AB33 /* UserCell.swift in Sources */,
 				A837A8352A958AF10082AB33 /* PostView.swift in Sources */,
 				A837A8302A9465E50082AB33 /* AlamofireViewModel.swift in Sources */,
 				A837A83E2A958BE00082AB33 /* UserView.swift in Sources */,
