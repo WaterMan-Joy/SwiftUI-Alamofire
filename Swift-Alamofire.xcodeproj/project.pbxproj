@@ -13,7 +13,11 @@
 		A837A8242A9437F60082AB33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A837A8232A9437F60082AB33 /* Preview Assets.xcassets */; };
 		A837A82D2A945FCC0082AB33 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A837A82C2A945FCC0082AB33 /* Alamofire */; };
 		A837A8302A9465E50082AB33 /* AlamofireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A82F2A9465E50082AB33 /* AlamofireViewModel.swift */; };
-		A837A8322A9467350082AB33 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A8312A9467350082AB33 /* Photo.swift */; };
+		A837A8322A9467350082AB33 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A8312A9467350082AB33 /* Post.swift */; };
+		A837A8352A958AF10082AB33 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A8342A958AF10082AB33 /* PostView.swift */; };
+		A837A8382A958BA60082AB33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A8372A958BA60082AB33 /* User.swift */; };
+		A837A83E2A958BE00082AB33 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A83D2A958BE00082AB33 /* UserView.swift */; };
+		A837A8402A958C0A0082AB33 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837A83F2A958C0A0082AB33 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +28,11 @@
 		A837A8212A9437F60082AB33 /* Swift_Alamofire.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swift_Alamofire.entitlements; sourceTree = "<group>"; };
 		A837A8232A9437F60082AB33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A837A82F2A9465E50082AB33 /* AlamofireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewModel.swift; sourceTree = "<group>"; };
-		A837A8312A9467350082AB33 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		A837A8312A9467350082AB33 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A837A8342A958AF10082AB33 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		A837A8372A958BA60082AB33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A837A83D2A958BE00082AB33 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		A837A83F2A958C0A0082AB33 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,8 @@
 		A837A81A2A9437F60082AB33 /* Swift-Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				A837A82E2A9465D20082AB33 /* ViewModel */,
 				A837A82A2A9438210082AB33 /* Model */,
+				A837A8392A958BBE0082AB33 /* Core */,
 				A837A81B2A9437F60082AB33 /* Swift_AlamofireApp.swift */,
 				A837A81D2A9437F60082AB33 /* ContentView.swift */,
 				A837A81F2A9437F60082AB33 /* Assets.xcassets */,
@@ -80,7 +88,8 @@
 		A837A82A2A9438210082AB33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A837A8312A9467350082AB33 /* Photo.swift */,
+				A837A8312A9467350082AB33 /* Post.swift */,
+				A837A8372A958BA60082AB33 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +98,57 @@
 			isa = PBXGroup;
 			children = (
 				A837A82F2A9465E50082AB33 /* AlamofireViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A837A8332A958ADC0082AB33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A837A8342A958AF10082AB33 /* PostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A837A8362A958B930082AB33 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				A837A8332A958ADC0082AB33 /* View */,
+				A837A82E2A9465D20082AB33 /* ViewModel */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		A837A8392A958BBE0082AB33 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A837A83A2A958BCD0082AB33 /* User */,
+				A837A8362A958B930082AB33 /* Post */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A837A83A2A958BCD0082AB33 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A837A83C2A958BD60082AB33 /* ViewModel */,
+				A837A83B2A958BD20082AB33 /* View */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A837A83B2A958BD20082AB33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A837A83D2A958BE00082AB33 /* UserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A837A83C2A958BD60082AB33 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A837A83F2A958C0A0082AB33 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,10 +229,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A837A8322A9467350082AB33 /* Photo.swift in Sources */,
+				A837A8322A9467350082AB33 /* Post.swift in Sources */,
+				A837A8402A958C0A0082AB33 /* UserViewModel.swift in Sources */,
 				A837A81E2A9437F60082AB33 /* ContentView.swift in Sources */,
+				A837A8382A958BA60082AB33 /* User.swift in Sources */,
 				A837A81C2A9437F60082AB33 /* Swift_AlamofireApp.swift in Sources */,
+				A837A8352A958AF10082AB33 /* PostView.swift in Sources */,
 				A837A8302A9465E50082AB33 /* AlamofireViewModel.swift in Sources */,
+				A837A83E2A958BE00082AB33 /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

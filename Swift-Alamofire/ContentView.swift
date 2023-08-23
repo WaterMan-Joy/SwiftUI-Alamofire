@@ -8,26 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @ObservedObject var viewModel = AlamofireViewModel()
-    
+        
     var body: some View {
-        ScrollView {
-            VStack {
-                Button(action: {
-                    viewModel.fetchPhotos()
-                }, label: {
-                    Text("go")
-                })
-                ForEach(viewModel.photos) { photo in
-                    Text(photo.description)
-                    Divider()
+        TabView {
+            PostView()
+                .tabItem {
+                    Image(systemName: "house.circle")
+                                            Text("Posts")
                 }
-            }
-            .padding()
-        }
-        .refreshable {
-            viewModel.fetchPhotos()
+            UserView()
+                .tabItem {
+                    Image(systemName: "house.circle")
+                                            Text("Users")
+                }
         }
     }
 }

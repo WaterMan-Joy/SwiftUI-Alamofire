@@ -12,7 +12,7 @@ import Combine
 
 class AlamofireViewModel: ObservableObject {
     
-    @Published var photos = [Photo]()
+    @Published var photos = [Post]()
     
     var subscription = Set<AnyCancellable>()
     
@@ -26,7 +26,7 @@ class AlamofireViewModel: ObservableObject {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {return}
         
         AF.request(url)
-            .publishDecodable(type: [Photo].self)
+            .publishDecodable(type: [Post].self)
             .compactMap({ $0.value })
             .sink { conpletion in
                 print("DEBUG: COMPLETE")

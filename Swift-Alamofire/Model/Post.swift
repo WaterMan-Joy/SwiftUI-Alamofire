@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Photo: Codable, Identifiable, CustomStringConvertible {
+struct Post: Codable, Identifiable, CustomStringConvertible {
     let userID, id: Int
     let title, body: String
     
